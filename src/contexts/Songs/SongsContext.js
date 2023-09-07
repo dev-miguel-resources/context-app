@@ -15,6 +15,7 @@ const SongsContextProvider = ({ children }) => {
     getTopTracks()
   }, [])
 
+
   // paso °3: Generar la lógica para la página de Songs
   const getTopTracks = () => {
     fetch(chartTracksGet())
@@ -58,7 +59,7 @@ const SongsContextProvider = ({ children }) => {
       {children}
     </SongsContext.Provider>
   )
-} // cierre del context provider
+}
 
 export default SongsContextProvider
 
