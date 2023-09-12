@@ -6,7 +6,7 @@ import ProgressBar from '../../atoms/ProgressBar/ProgressBar'
 import { SongsContext } from './../../contexts/Songs/SongsContext'
 
 const Songs = () => {
-  const { validateQTrack, doneFetch, text, tracks } = useContext(SongsContext)
+  const { validateQTrack, doneFetch, tracks, text } = useContext(SongsContext);
   return (
     <>
       <SearchTracks validateQTrack={validateQTrack} />
@@ -20,7 +20,7 @@ const Songs = () => {
         <ProgressBar />
       )}
     </>
-  )
-}
+  );
+};
 
 export default Songs

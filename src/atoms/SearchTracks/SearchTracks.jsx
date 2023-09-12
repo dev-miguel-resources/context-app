@@ -10,7 +10,11 @@ const SearchTracks = ({ validateQTrack }) => (
       label="Track"
       margin="normal"
       variant="outlined"
-      onKeyUp={(e) => validateQTrack(e)}
+      onKeyUp={(e) => {
+        if (e.key === 'Enter') {
+          validateQTrack(e)
+        }
+      }}
     />
     <IconButton onClick={(e) => validateQTrack(e)}>
       <SearchIcon />
